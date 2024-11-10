@@ -7,9 +7,9 @@ import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 
 @CucumberOptions(
-        features = "src/test/resources/Features",
+        features = "src/test/resources/Features/Login.feature",
         glue = {"stepDefinitions", "StepDefinition"},
-        tags = "@RunAll",
+        tags = "@AndroidScenario",
         plugin = {"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"},
         monochrome = true
 

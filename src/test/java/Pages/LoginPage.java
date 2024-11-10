@@ -4,6 +4,7 @@ import StepDefinition.BaseTest;
 import Utility.HelperMethods;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.pagefactory.AndroidFindBy;
+import io.appium.java_client.pagefactory.iOSXCUITFindBy;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -19,6 +20,7 @@ public class LoginPage extends BaseTest {
     HelperMethods helperMethods;
     AppiumDriver driver;
     @AndroidFindBy(xpath = "//android.widget.TextView[@text='standard_user']")
+    @iOSXCUITFindBy(xpath = "//XCUIElementTypeTextField[@name='IntegerA']")
     WebElement standardUser;
     @AndroidFindBy(xpath = "//android.widget.TextView[@text='locked_out_user']")
     WebElement lockedUser;
@@ -38,6 +40,7 @@ public class LoginPage extends BaseTest {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(50000));
         wait.until(ExpectedConditions.visibilityOf(standardUser));
         standardUser.click();
+        logger.info("Label attribute " + standardUser.getAttribute("label"));
         logger.info("Clicked on standard user");
 
     }

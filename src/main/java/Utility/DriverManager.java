@@ -25,7 +25,7 @@ public class DriverManager {
     public void initializeDriver() throws Exception {
         AppiumDriver driver = null;
         Properties properties = propertyFile.getProperty("src/test/resources/configuration.properties");
-        final String APP = properties.getProperty("APP");//"C:\\Users\\paragdwivedi\\Downloads\\Android.SauceLabs.Mobile.Sample.app.2.7.1.apk";
+        final String APP = properties.getProperty("APP");//"C:\\Users\\chauhans\\Downloads\\Android.SauceLabs.Mobile.Sample.app.2.7.1.apk";
         final String appiumServer = properties.getProperty("appiumServer");
         //properties.getProperty("appiumServer");
 

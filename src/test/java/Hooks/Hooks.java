@@ -10,7 +10,6 @@ public class Hooks {
     private static final Logger logger = LogManager.getLogger(Hooks.class);
     public static AppiumDriverLocalService service;
     public void startAppium() {
-
         logger.info("Starting the appium server");
         service = AppiumDriverLocalService.buildDefaultService();
         service.start();

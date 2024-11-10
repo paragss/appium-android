@@ -28,7 +28,7 @@ public class LoginSteps extends  BaseTest {
 
     @Before
     public void getSetup() throws IOException {
-        this.driver = super.setup();
+        driver = super.setup();
         productsPageSteps = new ProductsPageSteps(driver);
         productCheckoutSteps = new ProductCheckoutSteps(driver);
     }
